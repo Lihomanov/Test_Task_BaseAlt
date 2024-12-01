@@ -1,0 +1,25 @@
+From 3876d2753356e9b89b429d5234cfb0384aa61dc5 Mon Sep 17 00:00:00 2001
+From: Andrew Lihomanov <lihomanov0202@inbox.ru>
+Date: Sun, 1 Dec 2024 18:14:48 +0300
+Subject: [PATCH] fix_c11_img_path
+
+---
+ c11/main.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/c11/main.c b/c11/main.c
+index 8f3aa50..1a97d52 100644
+--- a/c11/main.c
++++ b/c11/main.c
+@@ -23,7 +23,7 @@ int main(void)
+ 		return EXIT_FAILURE;
+ 	}
+ 
+-	SDL_Surface* bmp = SDL_LoadBMP("../img/grumpy-cat.bmp");
++	SDL_Surface* bmp = SDL_LoadBMP("/usr/share/sdl2-examples/grumpy-cat.bmp");
+ 	if (bmp == NULL) {
+ 		fprintf(stderr, "SDL_LoadBMP Error: %s\n", SDL_GetError());
+ 		SDL_DestroyRenderer(ren);
+-- 
+2.42.2
+
