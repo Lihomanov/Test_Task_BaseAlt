@@ -1,0 +1,28 @@
+From 570ca8b3aea4bf53a7e33157eedc7139d1593bd4 Mon Sep 17 00:00:00 2001
+From: Andrew Lihomanov <lihomanov0202@inbox.ru>
+Date: Sun, 1 Dec 2024 17:13:33 +0300
+Subject: [PATCH] =?UTF-8?q?fix=5F=D1=8118=5Fimg=5Fpath?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ c18/main.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/c18/main.c b/c18/main.c
+index 4d69d76..b339ebc 100644
+--- a/c18/main.c
++++ b/c18/main.c
+@@ -25,7 +25,7 @@ int main(void)
+ 		return EXIT_FAILURE;
+ 	}
+ 
+-	SDL_Surface* bmp = SDL_LoadBMP("../img/grumpy-cat.bmp");
++	SDL_Surface* bmp = SDL_LoadBMP("/usr/share/sdl2-examples/grumpy-cat.bmp");
+ 	if (bmp == NULL) {
+ 		fprintf(stderr, "SDL_LoadBMP Error: %s\n", SDL_GetError());
+ 		SDL_DestroyRenderer(ren);
+-- 
+2.42.2
+
