@@ -22,7 +22,7 @@ jobs:
         tests_list:
         - { folder: "assembly/linux-x86_64" }
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: install_dependencies
         run: |
           sudo apt update

@@ -25,7 +25,7 @@ jobs:
         - { folder: "c++20-cmake" }
         - { folder: "c++23-cmake" }
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: install_dependencies
         run: |
           sudo apt update
@@ -44,7 +44,7 @@ jobs:
         - { folder: "c++98" }
         - { folder: "c++11" }
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: install_dependencies
         run: |
           sudo apt update
