@@ -32,7 +32,7 @@ jobs:
         - { folder: "c18" }
         - { folder: "c2x" }
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: install_dependencies
         run: |
           sudo apt update
